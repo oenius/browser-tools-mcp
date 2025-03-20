@@ -7,8 +7,8 @@
     "browser-tools-mcp": "dist/mcp-server.js"
   },
   "scripts": {
-    "inspect": "tsc && npx @modelcontextprotocol/inspector node -- dist/mcp-server.js",
-    "inspect-live": "npx @modelcontextprotocol/inspector npx -- @agentdeskai/browser-tools-mcp",
+    "inspect": "tsc && node node_modules/@modelcontextprotocol/inspector/bin/inspector.js node -- dist/mcp-server.js",
+    "inspect-live": "tsc && node node_modules/@modelcontextprotocol/inspector/bin/inspector.js node -- dist/mcp-server.js",
     "build": "tsc",
     "start": "tsc && node dist/mcp-server.js",
     "prepublishOnly": "npm run build",
@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.4.1",
+    "@modelcontextprotocol/inspector": "latest",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.2",

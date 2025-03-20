@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "prepare": "cd browser-tools-mcp && npm install"
+  },
+  "dependencies": {
+    "browser-tools-mcp": "github:oenius/browser-tools-mcp"
   }
 }
